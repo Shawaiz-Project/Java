@@ -1,77 +1,123 @@
-# CNIC Information Analyzer (Java)
+# Java Console Applications – Academic Practice Repository
 
-This Java program validates a Pakistani CNIC number and analyzes it to extract useful information such as province, division, gender, and card expiry year.
+## 📘 Overview
+
+This repository contains a collection of Java console-based applications developed for academic learning and programming practice.  
+The projects focus on fundamental programming concepts including:
+
+- Conditional statements
+- User input handling
+- Logical decision making
+- Modular thinking
+- Clean console output
+
+All programs are written in **Java** and use standard input/output methods.
 
 ---
 
-## 📌 Project Description
+## 🧑‍🎓 Intended Audience
 
-The CNIC Information Analyzer:
-- Takes a CNIC number (without dashes)
-- Checks whether it is valid (13 digits, numeric)
-- Extracts information using CNIC rules
-- Displays cardholder details in a readable format
-
-This project is intended for **educational and practice purposes**.
-
----
-
-## ✨ Features
-
-- CNIC validation (length & numeric check)
-- Province detection
-- Division detection (Gujranwala)
-- Gender identification
-- Expiry year calculation (10 years after issue date)
-- Simple console-based interaction
+- Beginner Java programmers
+- Computer Science students
+- Programming fundamentals learners
+- Academic assignments and practice work
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Java
+- Java (JDK 8+)
 - `java.util.Scanner`
+- Command Line Interface (CLI)
 
 ---
 
-## 📂 File Information
+## 📂 Project Structure
 
-- **File Name:** `CNICInfo_231980079.java`
-- **Language:** Java
-- **Type:** Console Application
-
----
-
-## ▶️ How to Run the Program
-
-### 1️⃣ Check Java Installation
-java --version
-
-
-### 2️⃣ Compile the Program
-javac CNICInfo_231980079.java
-
-
-### 3️⃣ Run the Program
-java CNICInfo_231980079
+Java/
+│
+├── CNICInfo_231980079.java
+├── Loan.java
+├── Grade.java
+├── Ticket.java
+└── README.md
 
 
 ---
 
-## 🧪 Sample Input
+# 🔹 PROGRAM 1: CNIC Information Analyzer
 
-Enter your CNIC number (without dashes):
-3310441234567
+## 📄 File Name
+`CNICInfo_231980079.java`
 
-Enter the year card issue date (e.g. 2024):
-2024
+---
+
+## 📝 Program Description
+
+This program analyzes a Pakistani CNIC number entered by the user and extracts meaningful information such as:
+
+- Province
+- Division
+- Gender
+- Card Expiry Year
+
+It also validates whether the CNIC number is valid based on length and numeric rules.
+
+---
+
+## 🎯 Objectives
+
+- Practice string handling
+- Learn character manipulation
+- Understand real-world data validation
+- Apply modular programming using methods
+
+---
+
+## 🔍 CNIC Validation Rules
+
+- CNIC must contain **exactly 13 digits**
+- No dashes (`-`) allowed
+- All characters must be numeric
+- Invalid CNICs are rejected immediately
+
+---
+
+## 🧠 Logic Explanation
+
+### Step 1: CNIC Validation
+- Length check
+- Character-by-character digit verification
+
+### Step 2: Province Detection
+- First digit determines province
+- Uses predefined mapping
+
+### Step 3: Division Detection
+- Second digit checked for Gujranwala division (Punjab only)
+
+### Step 4: Gender Detection
+- Last digit:
+  - Even → Female
+  - Odd → Male
+
+### Step 5: Expiry Year
+- Calculated as:
+Issue Year + 10
 
 
 ---
 
-## 📤 Sample Output
+## ▶️ Sample Input
 
-********* THE CARDHOLDER DETAILS ***********
+CNIC: 3310441234567
+Issue Year: 2024
+
+
+---
+
+## ▶️ Sample Output
+
 Province : Punjab
 Division : Gujranwala
 Gender : Male
@@ -80,33 +126,186 @@ Expire Year : 2034
 
 ---
 
-## ⚠️ Validation Rules
+# 🔹 PROGRAM 2: Loan Approval System
 
-- CNIC must contain **exactly 13 digits**
-- Only numeric characters are allowed
-- Gender is determined from the **last digit**
-- Expiry year is calculated as:
-Issue Year + 10
+## 📄 File Name
+`Loan.java`
+
+---
+
+## 📝 Program Description
+
+This program evaluates loan approval eligibility based on:
+
+- Annual income
+- Credit score
+
+It simulates a basic banking decision system.
+
+---
+
+## 🎯 Objectives
+
+- Apply nested conditional logic
+- Simulate real-world financial rules
+- Improve decision-based programming skills
+
+---
+
+## 📊 Approval Criteria
+
+### Approved:
+- Credit Score > 700
+- Income > 50,000
+
+### Special Offer:
+- Credit Score > 750
+- Income > 50,000
+
+### Approved with Co-Signer:
+- Credit Score between 600–700
+- Income > 40,000
+
+### Rejected:
+- Credit Score < 600
+- Income < 40,000
+
+---
+
+## 🧠 Logic Flow
+
+1. Read income
+2. Read credit score
+3. Apply conditions in priority order
+4. Display decision message
+
+---
+
+## ▶️ Sample Output
+
+Your approval is accepted.
+You get a special offer.
 
 
 ---
 
-## 🚀 Future Improvements
+# 🔹 PROGRAM 3: Grade Calculator
 
-- Add support for all divisions
-- Improve CNIC validation logic
-- Add exception handling
-- Convert to GUI application
+## 📄 File Name
+`Grade.java`
+
+---
+
+## 📝 Program Description
+
+This program calculates and displays a student’s grade based on their score.
+
+---
+
+## 🎯 Objectives
+
+- Practice range-based conditions
+- Learn academic grading logic
+- Handle invalid input
+
+---
+
+## 📊 Grading System
+
+| Score Range | Grade |
+|------------|-------|
+| 90+        | A     |
+| 80–89      | B     |
+| 70–79      | C     |
+| 60–69      | D     |
+| Below 60   | F     |
+
+⭐ Bonus message for scores above 95
+
+---
+
+## ▶️ Sample Output
+
+Your grade is 'A'
+Excellent performance
+
+
+---
+
+# 🔹 PROGRAM 4: Ticket Price Calculator
+
+## 📄 File Name
+`Ticket.java`
+
+---
+
+## 📝 Program Description
+
+This program calculates ticket price based on:
+
+- Age
+- Student status
+
+---
+
+## 🎯 Objectives
+
+- Apply real-life pricing logic
+- Use strings and conditionals
+- Practice discounts and price adjustments
+
+---
+
+## 💰 Ticket Pricing Rules
+
+| Age Group | Price |
+|----------|-------|
+| 0–12     | $5.00 |
+| 13–17    | $8.00 |
+| 18–64    | $12.00|
+| 65+      | $7.00 |
+
+🎓 Student Discount: $2
+
+---
+
+## ▶️ Sample Output
+
+Price of the ticket is : $10.0
+
+
+---
+
+## ▶️ How to Compile & Run
+
+javac FileName.java
+java FileName
+
+
+Example:
+javac Ticket.java
+java Ticket
+
+
+---
+
+## 🚀 Future Enhancements
+
+- GUI version using JavaFX
+- Exception handling
+- Input validation
+- Menu-driven main program
+- File handling support
 
 ---
 
 ## 👨‍💻 Author
 
 **Shawaiz**  
-Java CNIC Information Analyzer Project
+Java Programming Practice Projects
 
 ---
 
 ## 📄 License
 
-This project is created for learning and academic use.
+This repository is intended for educational and academic use only.
