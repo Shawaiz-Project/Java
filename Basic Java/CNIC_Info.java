@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class CNICInfo_231980079{
+public class CNIC_Info{
 
 	public static boolean isValidCNIC(String cnic){
 		boolean i = false;
