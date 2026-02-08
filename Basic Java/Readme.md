@@ -36,10 +36,15 @@ All programs are written in **Java** and use standard input/output methods.
 
 Java/
 │
-├── CNICInfo_231980079.java
+
+├──CNIC_Info.java
+
 ├── Loan.java
+
 ├── Grade.java
+
 ├── Ticket.java
+
 └── README.md
 
 
